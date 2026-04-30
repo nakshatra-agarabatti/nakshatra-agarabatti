@@ -7,6 +7,128 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+  <!-- =========================================
+ HEAVY CELEBRATION EFFECT
+ Transparent Background
+ More Quantity + Fast Natural Falling
+ Runs Only: April 30 & May 1, 2026
+ Duration: 11 Seconds
+ Paste before </body>
+========================================= -->
+
+<div id="celebration-container"></div>
+
+<style>
+/* FULL SCREEN LAYER */
+#celebration-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:99999;
+    overflow:hidden;
+    opacity:0;
+    animation: fadeLayer 11s ease-in-out forwards;
+}
+
+/* CONFETTI */
+.confetti{
+    position:absolute;
+    border-radius:2px;
+    opacity:0.95;
+    animation: fastFall linear forwards;
+}
+
+/* SCREEN FADE */
+@keyframes fadeLayer{
+    0%{opacity:0;}
+    4%{opacity:1;}
+    96%{opacity:1;}
+    100%{opacity:0;}
+}
+
+/* FAST NATURAL DROP */
+@keyframes fastFall{
+    0%{
+        transform:translateY(-120px) rotate(0deg) scale(0.7);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(110vh) translateX(40px) rotate(1080deg) scale(1.15);
+        opacity:0;
+    }
+}
+</style>
+
+<script>
+/* DATE CHECK */
+const now = new Date();
+const year = now.getFullYear();
+const month = now.getMonth() + 1;
+const day = now.getDate();
+
+/* RUN ONLY APRIL 30 & MAY 1 2026 */
+if (
+    year === 2026 &&
+    ((month === 4 && day === 30) || (month === 5 && day === 1))
+){
+
+const container = document.getElementById("celebration-container");
+
+const colors = [
+    "#ff4d4d",
+    "#ffd633",
+    "#00ccff",
+    "#66ff66",
+    "#ff66cc",
+    "#ffffff",
+    "#ff9933",
+    "#9b59b6"
+];
+
+/* MORE QUANTITY */
+for(let i=0;i<260;i++){
+
+    const piece = document.createElement("span");
+    piece.classList.add("confetti");
+
+    piece.style.left = Math.random()*100 + "%";
+    piece.style.top = "-100px";
+
+    let size = Math.random()*9 + 4;
+    piece.style.width = size + "px";
+    piece.style.height = size + "px";
+
+    piece.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
+
+    /* FAST RANDOM SPEED */
+    piece.style.animationDuration =
+        (Math.random()*1.8 + 1.2) + "s";
+
+    /* RANDOM SPAWN IN 11 SEC */
+    piece.style.animationDelay =
+        (Math.random()*9) + "s";
+
+    piece.style.opacity = Math.random()*0.5 + 0.5;
+
+    container.appendChild(piece);
+}
+
+/* REMOVE AFTER 11 SEC */
+setTimeout(()=>{
+    container.remove();
+},11000);
+
+}else{
+    document.getElementById("celebration-container").remove();
+}
+</script>
 <body>
   <div class="toast" id="toast">Item added to cart</div>
 
