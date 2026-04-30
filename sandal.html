@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandal Agarabathi - Nakshatra Agarabathi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-fragrance="Sandal Agarabathi">
+  <div class="toast" id="toast">Item added to cart</div>
+
+  <header>
+    <div class="logo"><img src="img/logo.png" alt="Nakshatra Logo"></div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#mainCart">Cart</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="fragrance-hero fade-up">
+    <div>
+      <h1>Sandal Agarabathi</h1>
+      <div class="tagline">Calm, divine and traditional fragrance</div>
+      <p>Sandal gives a calm, divine and traditional fragrance. Best for pooja, meditation, prayer and peaceful surroundings.</p>
+      <a class="btn-link" href="#packages">View Packages</a>
+      <a class="btn-link" href="index.html#products">← Back to Products</a>
+    </div>
+    <div class="zoom-in"><img src="img/sandal main.jpeg" alt="Sandal Agarabathi"></div>
+  </section>
+
+  <section id="packages" class="fade-up">
+    <h2 class="title">Sandal Agarabathi Packages</h2>
+    <p class="subtitle">Choose Standard or Premium package and add to cart.</p>
+    <div class="detail-layout">
+      <div class="detail-grid">
+        <div class="detail-card zoom-in">
+          <img src="img/sandal basic.jpeg" alt="Standard Agarabathi Package">
+          <h3>Standard Agarabathi</h3>
+          <div class="price">₹80</div>
+          <p>Best for customers who want richer fragrance and smooth burning.</p>
+          <ul>
+            <li>Richer fragrance experience</li>
+            <li>Smooth burning</li>
+            <li>Good for pooja and meditation</li>
+            <li>Suitable for daily home freshness</li>
+          </ul>
+          <button onclick="addToCart('Standard Agarabathi',80)">Add to Cart</button>
+        </div>
+
+        <div class="detail-card zoom-in">
+          <img src="img/sandal premium.jpeg" alt="Premium Agarabathi Package">
+          <h3>Premium Agarabathi</h3>
+          <div class="price"><span class="old-price">₹180</span>₹120</div>
+          <div class="discount">Discount Price Available</div>
+          <p>Luxury pack for special pooja, festivals and premium fragrance experience.</p>
+          <ul>
+            <li>Strong and long-lasting aroma</li>
+            <li>Premium luxury fragrance</li>
+            <li>Best for festivals and special occasions</li>
+            <li>Ideal for temple-like atmosphere</li>
+          </ul>
+          <button onclick="addToCart('Premium Agarabathi',120)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="cart-box zoom-in">
+        <h3>🛒 Your Cart</h3>
+        <div id="detailCartItems" class="empty">Cart is empty</div>
+        <div class="total" id="detailCartTotal">Total: ₹0</div>
+        <a class="btn-link pay-btn" href="index.html#mainCart">Go to Customer Details</a>
+        <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-box"><h3>Nakshatra Agarabathi</h3><p>A Symbol of Purity....</p><p>Feel The Magic of Nakshatra</p></div>
+      <div class="footer-box"><h3>Our Fragrances</h3><a href="sandal.html">Sandal Agarabathi</a><a href="black-stone.html">Black Stone Agarabathi</a><a href="mogra.html">Mogra Agarabathi</a></div>
+      <div class="footer-box"><h3>Contact</h3><a href="tel:+916361557185">Call: +91 63615 57185</a><a href="https://wa.me/916361557185">WhatsApp Order</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 Nakshatra Agarabathi. All Rights Reserved.</div>
+  </footer>
+
+  <a class="float float-wa" href="https://wa.me/916361557185?text=Hello%20Nakshatra%2C%20I%20want%20to%20order%20Agarabathi"><i class="fa-brands fa-whatsapp"></i></a>
+  <a class="float float-call" href="tel:+916361557185"><i class="fa-solid fa-phone"></i></a>
+  <script src="script.js"></script>
+</body>
+</html>

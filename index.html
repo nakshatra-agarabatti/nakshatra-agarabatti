@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nakshatra Agarabathi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toast" id="toast">Item added to cart</div>
+
+  <header>
+    <div class="logo"><img src="img/logo.png" alt="Nakshatra Logo"></div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <nav id="navMenu">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#upcoming">Upcoming</a>
+      <a href="index.html#mainCart">Cart</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero fade-up" id="home">
+    <div>
+      <h1>Nakshatra Agarabathi</h1>
+      <div class="tagline">Feel The Magic of Nakshatra</div>
+      <div class="sub-tagline">A Symbol of Purity....</div>
+      <p>Premium agarabathi crafted for pooja, meditation, relaxation, home freshness and peaceful spiritual moments.</p>
+      <button onclick="goProducts()">Shop Now</button>
+    </div>
+    <div class="hero-img zoom-in">
+      <img src="img/nakstra banner.jpeg" alt="Nakshatra Agarabathi Banner">
+    </div>
+  </section>
+
+  <section class="about fade-up" id="about">
+    <h2 class="title">About Nakshatra</h2>
+    <p class="subtitle">Nakshatra Agarabathi is made to bring purity, peace and positivity into every space. A Symbol of Purity.... and Feel The Magic of Nakshatra through every fragrance. Suitable for daily pooja, meditation, temple use, home freshness, office freshness and spiritual relaxation.</p>
+    <div class="grid">
+      <div class="box zoom-in"><h3>Premium Quality</h3><p>Made with carefully selected fragrance ingredients for smooth and pleasant aroma.</p></div>
+      <div class="box zoom-in"><h3>Long Lasting Aroma</h3><p>Creates a fresh and peaceful atmosphere that stays pleasant for a long time.</p></div>
+      <div class="box zoom-in"><h3>Spiritual Experience</h3><p>Perfect for pooja, meditation, prayer, yoga and daily positive energy.</p></div>
+    </div>
+  </section>
+
+  <section class="products fade-up" id="products">
+    <h2 class="title">Our Agarabathi Fragrances</h2>
+    <p class="subtitle">Choose your fragrance. Each Order Now button opens a separate fragrance page.</p>
+    <div class="grid">
+      <div class="card zoom-in">
+        <img src="img/sandal main.jpeg" alt="Sandal Agarabathi">
+        <h3>Sandal Agarabathi</h3>
+        <p class="product-details">Sandal gives a calm, divine and traditional fragrance. Best for pooja, meditation and peaceful surroundings.</p>
+        <a class="btn-link" href="sandal.html">Order Now</a>
+      </div>
+      <div class="card zoom-in">
+        <img src="img/black stone main.jpeg" alt="Black Stone Agarabathi">
+        <h3>Black Stone Agarabathi</h3>
+        <p class="product-details">Black Stone gives a strong, rich and luxury fragrance. Best for evening pooja, special occasions and premium spiritual atmosphere.</p>
+        <a class="btn-link" href="black-stone.html">Order Now</a>
+      </div>
+      <div class="card zoom-in">
+        <img src="img/mogra main.jpeg" alt="Mogra Agarabathi">
+        <h3>Mogra Agarabathi</h3>
+        <p class="product-details">Mogra gives a fresh floral fragrance that spreads happiness, positivity and home freshness.</p>
+        <a class="btn-link" href="mogra.html">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming fade-up" id="upcoming">
+    <h2 class="title">Upcoming Fragrances</h2>
+    <p class="subtitle">New Nakshatra fragrances are coming soon with fresh, premium and long-lasting aroma.</p>
+    <div class="grid">
+      <div class="box zoom-in"><h3>🍍 Pineapple</h3><p>Fresh fruity fragrance for a bright and refreshing atmosphere.</p></div>
+      <div class="box zoom-in"><h3>🌹 Rose</h3><p>Classic floral fragrance for devotion, freshness and peaceful moments.</p></div>
+      <div class="box zoom-in"><h3>💜 Lavender</h3><p>Relaxing aroma for calmness, meditation and stress-free surroundings.</p></div>
+      <div class="box zoom-in"><h3>🌼 Jasmine</h3><p>Sweet floral fragrance for positivity, prayer and daily home freshness.</p></div>
+    </div>
+  </section>
+
+  <section class="main-cart-section fade-up" id="mainCart">
+    <h2 class="title">Your Cart</h2>
+    <p class="subtitle">Fill customer details, then place order or generate invoice.</p>
+    <div class="cart-box zoom-in">
+      <h3>Order Details</h3>
+      <div class="customer-form">
+        <input id="custName" type="text" placeholder="Full Name">
+        <input id="custPhone" type="tel" placeholder="Phone Number">
+        <textarea id="custAddress" placeholder="Full Address"></textarea>
+      </div>
+      <h3>🛒 Cart Summary</h3>
+      <div id="mainCartItems" class="empty">Cart is empty</div>
+      <div class="total" id="mainCartTotal">Total: ₹0</div>
+      <button class="pay-btn" onclick="sendCartToWhatsApp()">Payment / Order on WhatsApp</button>
+      <button class="invoice-btn" onclick="generateInvoice()">Generate Invoice</button>
+      <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </section>
+
+  <section class="business-info fade-up" id="contact">
+    <h2 class="title">Wholesale & Supply</h2>
+    <p class="subtitle">We are a trusted Agarbatti Manufacturer & Supplier offering premium quality products.</p>
+    <div class="grid">
+      <div class="box zoom-in"><h3>🏭 Agarbatti Manufacturer & Supplier</h3><p>High-quality agarbatti production with consistent fragrance and premium finish.</p></div>
+      <div class="box zoom-in"><h3>📦 Bulk Orders Available</h3><p>Special pricing available for wholesale, shops, dealers and distributors.</p></div>
+      <div class="box zoom-in"><h3>🚚 Pan India Delivery</h3><p>Fast and reliable delivery service available across India.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-box"><h3>Nakshatra Agarabathi</h3><p>A Symbol of Purity....</p><p>Feel The Magic of Nakshatra</p></div>
+      <div class="footer-box"><h3>Our Fragrances</h3><a href="sandal.html">Sandal Agarabathi</a><a href="black-stone.html">Black Stone Agarabathi</a><a href="mogra.html">Mogra Agarabathi</a></div>
+      <div class="footer-box"><h3>Packages</h3><p>Standard Agarabathi - ₹80</p><p>Premium Agarabathi - ₹120 <small><del>₹180</del></small></p></div>
+      <div class="footer-box"><h3>Contact</h3><a href="tel:+916361557185">Call: +91 63615 57185</a><a href="https://wa.me/916361557185">WhatsApp Order</a><p>Online Agarabathi Shop</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Nakshatra Agarabathi. All Rights Reserved.</div>
+  </footer>
+
+  <a class="float float-wa" href="https://wa.me/916361557185?text=Hello%20Nakshatra%2C%20I%20want%20to%20order%20Agarabathi"><i class="fa-brands fa-whatsapp"></i></a>
+  <a class="float float-call" href="tel:+916361557185"><i class="fa-solid fa-phone"></i></a>
+  <script src="script.js"></script>
+</body>
+</html>
